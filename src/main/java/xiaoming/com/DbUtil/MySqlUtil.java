@@ -19,8 +19,8 @@ public class MySqlUtil {
      */
     public static Connection connectDB() {
         String UserName = "root";
-        String Password = "BNVfwJ7QbZ0rUWtJs4WUg2JeJ8MIXIQv";
-        String url = "jdbc:mysql://rm-uf647qf8fyiw029160m.mysql.rds.aliyuncs.com:3306/zeus_goods_center?characterEncoding=utf8&useSSL=true";
+        String Password = "root";
+        String url = "jdbc:mysql://localhost:3306/test?characterEncoding=utf-8&useSSL=false";
 
 
         try {
@@ -134,9 +134,9 @@ public class MySqlUtil {
     @Test
     public void dbTest() {
 
-        String sql = "SELECT id, good_official_code, designer_id,  good_sku, brand_id,  platform_spu_id\n" +
-                "FROM zeus_goods_center.zeus_goods\n" +
-                "WHERE good_official_code='414998-DLC00-6705' AND id= 3151;\n";
+        String sql = "SELECT name ,age \n" +
+                "FROM  user\n" +
+                "WHERE  sex ='F';\n";
         MySqlUtil ms = new MySqlUtil();
         List<Map<String, Object>> ListResults = ms.MySqlSelect(sql);
         for (int i = 0; i < ListResults.size(); i++) {
