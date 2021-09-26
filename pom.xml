@@ -10,11 +10,13 @@
 
   <name>A Camel Spring Route</name>
 
+
+
   <parent>
     <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-starter-parent</artifactId>
-    <version>2.3.0.RELEASE</version>
-    <relativePath /> <!-- lookup parent from repository -->
+    <version>2.0.1.RELEASE</version>
+    <relativePath/> <!-- lookup parent from repository -->
   </parent>
 
   <properties>
@@ -33,7 +35,7 @@
         <groupId>org.apache.camel</groupId>
         <artifactId>camel-bom</artifactId>
         <version>3.7.0</version>
-        <scope>import</scope>
+
         <type>pom</type>
       </dependency>
 
@@ -59,11 +61,7 @@
         <artifactId>jackson-databind</artifactId>
         <version>2.11.0</version>
       </dependency>
-      <dependency>
-        <groupId>com.oracle</groupId>
-        <artifactId>ojdbc14</artifactId>
-        <version>10.2.0.2.0</version>
-      </dependency>
+
 
       <dependency>
         <groupId>commons-logging</groupId>
@@ -89,12 +87,7 @@
         <artifactId>spring-boot-devtools</artifactId>
       </dependency>
 
-    <!-- testing -->
-    <dependency>
-      <groupId>org.apache.camel</groupId>
-      <artifactId>camel-test-spring</artifactId>
-      <scope>test</scope>
-    </dependency>
+
     <dependency>
       <groupId>org.springframework</groupId>
       <artifactId>spring-web</artifactId>
@@ -105,18 +98,15 @@
       <artifactId>junit</artifactId>
       <version>4.13</version>
     </dependency>
-    <dependency>
-      <groupId>com.alibaba</groupId>
-      <artifactId>fastjson</artifactId>
-      <version>1.2.73</version>
-    </dependency>
+
     <dependency>
       <groupId>com.fasterxml.jackson.core</groupId>
       <artifactId>jackson-annotations</artifactId>
       <version>2.11.0</version>
     </dependency>
 
-  </dependencies>
+
+    </dependencies>
 
   <build>
     <defaultGoal>install</defaultGoal>
@@ -125,7 +115,7 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>
-        <version>3.8.1</version>
+          <version>3.1</version>
         <configuration>
           <source>1.8</source>
           <target>1.8</target>
@@ -134,7 +124,7 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-resources-plugin</artifactId>
-        <version>3.1.0</version>
+
         <configuration>
           <encoding>UTF-8</encoding>
         </configuration>
