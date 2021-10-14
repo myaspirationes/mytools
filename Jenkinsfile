@@ -4,9 +4,9 @@ pipeline {
     stages {
         stage('Hello') {
             steps {
-                echo 'Hello World'
+                echo 'Hello World~~~~~####'
                 script{
-                    print("hello script")
+                    print("hello script~~~~")
                 }
             }
         }
@@ -19,7 +19,7 @@ pipeline {
         }
         stage('build'){
             steps {
-            echo 'Begin build~~~'
+            echo 'Begin build~@@@@@~~'
            sh 'mvn clean package '
             }
         }
